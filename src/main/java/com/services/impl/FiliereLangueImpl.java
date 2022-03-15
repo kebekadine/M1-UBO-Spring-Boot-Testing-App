@@ -1,8 +1,6 @@
 package com.services.impl;
 import com.dtos.FiliereLangueDto;
-import com.dtos.UtilisateurDto;
 import com.entities.FiliereLangue;
-import com.entities.Utilisateur;
 import com.repositories.FiliereLangueRepository;
 import org.springframework.stereotype.Service;
 
@@ -17,17 +15,24 @@ public class FiliereLangueImpl {
     }
 
 
-    public FiliereLangueDto saveFiliere(FiliereLangueDto filiereDto){
+    public FiliereLangueDto saveFiliere (FiliereLangueDto filiereLangueDto){
         //convertis la filiere en une entite filiere
-        FiliereLangue filiere =  filiereLangueDtoToEntity(filiereDto);
+        FiliereLangue filiere =  filiereLangueDtoToEntity(filiereLangueDto);
         //enregistre l'utilisateur
         filiere = filiereRepo.save(filiere);
 
         return filiereLangueEntityToDto(filiere);
     }
+
     public FiliereLangueDto getFiliereByCode(Long id){
         FiliereLangue filiereLg = filiereRepo.findById(id).orElseThrow(()->new EntityNotFoundException("Not found"));
         return filiereLangueEntityToDto(filiereLg);
+    }
+
+
+    public boolean deleteFiliereById (Long filiereId){
+        filiereRepo.deleteById(filiereId);
+        return true;
     }
 
     private FiliereLangueDto filiereLangueEntityToDto(FiliereLangue filiere) {

@@ -41,7 +41,6 @@ public class UserServiceImpl {
         });
         return user;
     }
-
     private UtilisateurDto userEntityToDto(Utilisateur user) {
         UtilisateurDto usr = new UtilisateurDto();
         usr.setId(user.getId());

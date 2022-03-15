@@ -9,12 +9,12 @@ public interface FiliereLangueService {
     FiliereLangueDto saveFiliere (FiliereLangueDto filiereLangue);
 
     /**
-     * Get filiere by it's code
+     * Get filiere by it's id
      */
-    FiliereLangueDto getFiliereByCode (Long codeFiliereLangue);
+    FiliereLangueDto getFiliereByCode (Long filiereId);
 
     /**
-     * Delete a filiere by it's code
+     * Delete a filiere by it's ID
      */
-    boolean deleteFiliere(Long codeFiliereLangue);
+    boolean deleteFiliereById(Long filiereId);
 }
