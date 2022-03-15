@@ -18,4 +18,52 @@ public class Utilisateur {
     private String nomUsuel;
     private String prenomUsuel;
     private String mail;
+
+    public Long getId() {
+        return Id;
+    }
+
+    public String getLogin() {
+        return Login;
+    }
+
+    public String getMotDePasse() {
+        return motDePasse;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public String getNomUsuel() {
+        return nomUsuel;
+    }
+
+    public String getPrenomUsuel() {
+        return prenomUsuel;
+    }
+
+    public void setId(Long id) {
+        Id = id;
+    }
+
+    public void setLogin(String login) {
+        Login = login;
+    }
+
+    public void setMotDePasse(String motDePasse) {
+        this.motDePasse = motDePasse;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public void setNomUsuel(String nomUsuel) {
+        this.nomUsuel = nomUsuel;
+    }
+
+    public void setPrenomUsuel(String prenomUsuel) {
+        this.prenomUsuel = prenomUsuel;
+    }
 }

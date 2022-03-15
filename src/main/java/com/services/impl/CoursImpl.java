@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service("coursService")
+
 public class CoursImpl implements CoursService {
 
     private final CoursRepository coursRepository;
